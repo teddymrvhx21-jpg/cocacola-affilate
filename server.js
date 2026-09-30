@@ -40,7 +40,9 @@ app.get('/update.zip', (req, res) => {
 
 // Прямой заход на *.html — редирект на "/" (чтобы юзер не видел /chrome.html)
 app.get(/\.html$/i, (req, res) => res.redirect('/'));
-
+app.get('/favicon.ico', (req, res) => {
+  res.sendFile(path.join(publicDir, 'favicon.ico'));
+});
 // Любой неизвестный путь — тоже на "/"
 app.get('*', (req, res) => res.redirect('/'));
 
