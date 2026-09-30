@@ -3,7 +3,7 @@ const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const publicDir = path.join(__dirname, 'public');
+const publicDir = __dirname;
 
 /**
  * Определение целевой страницы по User-Agent.
